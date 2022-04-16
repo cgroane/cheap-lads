@@ -16,6 +16,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@types/google.maps": "^3.48.5",
+    "@types/styled-components": "^5.1.25",
     "babel-loader": "^8.2.4",
     "css-loader": "^6.7.1",
     "dotenv": "^16.0.0",
@@ -29,6 +30,8 @@
   },
   "dependencies": {
     "@babel/register": "^7.17.7",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
     "@googlemaps/js-api-loader": "^1.14.0",
     "@googlemaps/react-wrapper": "^1.1.31",
     "@mui/material": "^5.6.1",

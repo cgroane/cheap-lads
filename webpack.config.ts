@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = () => {
-  const env = dotenv
+
   return {
     mode: prod ? 'production' : 'development',
     entry: './src/index.tsx',
@@ -15,7 +15,12 @@ module.exports = () => {
     path: __dirname + '/dist/',
   },
   module: {
-    rules: [
+    resolve: {
+        alias: {
+            '@mui/styled-engine': '@mui/styled-engine-sc'
+        },
+    },
+    rules: [ 
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,

@@ -1,12 +1,14 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useRef } from "react";
+import { useLoadMap } from "../../hooks/useLoadMap";
 
 const SpecialsMap: React.FC = () => {
+    const mapElement = useRef<HTMLDivElement>(null)
+    useLoadMap(mapElement.current as HTMLDivElement);
     return (
-        <Grid>
-            Specials Map
-        </Grid>
+        <Grid ref={mapElement} />
     )
 };
+
 
 export default SpecialsMap;
