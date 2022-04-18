@@ -1,6 +1,6 @@
+import * as webpack from 'webpack';
+import Dotenv from'dotenv-webpack';
 const prod = process.env.NODE_ENV === 'production';
-import * as dotenv from "dotenv";
-dotenv.config({ path: __dirname+'/env/.env' });
 
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -14,12 +14,12 @@ module.exports = () => {
     output: {
     path: __dirname + '/dist/',
   },
-  module: {
-    resolve: {
-        alias: {
-            '@mui/styled-engine': '@mui/styled-engine-sc'
-        },
+  resolve: {
+    alias: {
+        '@mui/styled-engine': '@mui/styled-engine-sc'
     },
+  },
+  module: {
     rules: [ 
       {
         test: /\.(ts|tsx)$/,
@@ -41,6 +41,7 @@ module.exports = () => {
       template: 'index.html',
     }),
     new MiniCssExtractPlugin(),
+    new Dotenv({ path: __dirname+'/env/.env' })
   ],
   }
 };

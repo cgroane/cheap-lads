@@ -7,10 +7,9 @@ interface MapProps {
 }
 
 const SpecialsMap: React.FC = () => {
-    const mapElement = useRef<HTMLDivElement>(null)
-    useLoadMap(mapElement.current as HTMLDivElement);
+    const mapElement = useLoadMap();
     return (
-        <Grid ref={mapElement} />
+        <Grid ref={mapElement} style={{ height: '100%', width: '100%' }} />
     )
 };
 
