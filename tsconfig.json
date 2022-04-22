@@ -4,6 +4,7 @@
       "jsx": "react",
       "module": "esnext",
       "moduleResolution": "node",
+      "skipLibCheck": true,
       "lib": [
         "dom",
         "esnext"
@@ -11,8 +12,10 @@
       "strict": true,
       "sourceMap": true,
       "target": "esnext",
+      "types": [ "google.maps", "googlemaps" ],
+      "typeRoots": [
+        "node_modules/@types",
+        "types/*.d.ts"
+      ]
     },
-    "exclude": [
-      "node_modules"
-    ]
   }

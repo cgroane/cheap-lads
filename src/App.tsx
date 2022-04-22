@@ -1,10 +1,12 @@
 import React from 'react';
-import SpecialsMap from './components/SpecialsMap/Map';
-import { useLoadMap } from './hooks/useLoadMap';
+import { Route, Routes } from 'react-router';
+import SpecialsPage from './pages/SpecialsPage/SpecialsPage';
 
 const App = () => {
     return (
-        <> <SpecialsMap /> </>
+        <Routes>
+            <Route path="/" element={<SpecialsPage />} />
+        </Routes>
     )
 };
 
